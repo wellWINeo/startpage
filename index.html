@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style type="text/css">
+
+:root {
+    --main-color: #002b36;
+    --green: #859900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --cyan: #2aa198;
+    --blue: #268bd2;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --yellow: #b58900;
+    --foreground-light: #93a1a1;
+    --white: #fff;
+}
+    @keyframes rise {
+        0% { opacity:0; }
+        100% { opacity:1; }
+    }
+
+    @keyframes fadein {
+        from { opacity:0.3; }
+        to { opacity:1; }
+    }
+
+    body {
+        background-color: var(--main-color);
+        text-align: center;
+        margin: 0;
+    }
+
+    input {
+        text-align: center;
+        color: var(--foreground-light);
+        background-color: #073642;
+        border: 2px solid #073642;
+        border-radius: 3px;
+        width: 100%;
+        height: 20px;
+    }
+
+    .header {
+        color: #93a1a1;
+    }
+
+    .grid-container {
+        position: absolute;
+        top: 40%;
+        width: 75%;
+        display: grid;
+        margin-left: 10%;
+        margin-right: 10%;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px 30px;
+    } 
+
+    .item {
+        color: #eee8d5;
+        text-align: center;
+    }
+    
+    .search {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Start Page</title>
+    
+</head>
+
+
+<body>
+    
+    <!--
+    <div>
+        <input id="search", style="search", type="text", spellcheck="true", autofocus, class="search"
+            onKeyDown="Javascript: if (event.keyCode == 13) search();">
+    </div>
+    -->
+
+    <div class="grid-container">
+            
+            <input id="search", style="search", type="text", spellcheck="true", autofocus, class="search">
+            
+            <p class=header class="item">/soc/</p>
+            <p class=header class="item">/frms/</p>
+            <p class=header class="item">/dev/</p>
+            <p class=header class="item">/misc/</p>
+            
+            <a href="example.com" class="item">youtube</a>
+            <a href="example.com" class="item">twitter</a>
+            <a href="example.com" class="item">books</a>
+            <a href="animaunt.org" class="item">anime</a>
+
+            <a href="2ch.hk/s" class="item">softach</a>
+            <a href="https://boards.4channel.org/g/" class="item">4ch/g/</a>
+            <a href="linux.org.ru" class="item">LOR</a>
+            <a href="example.com" class="item">example</a>
+
+            <a href="wiki.gentoo.org" class="item">gentoo wiki</a>
+            <a href="packages.gentoo.org" class="item">packages</a>
+            <a href="github.com/wellWINeo" class="item">github</a>
+            <a href="opennet.ru" class="item">opennet</a>
+
+            <a href="mpt.ru" class="item">mpt</a>
+            <a href="mailto:isip_s.a.uspenskiy@mpt.ru" class="item">my mail</a>
+            <a href="getpocket.com/my-list" class="item">pocket</a>
+            <a href="example.com" class="item">example</a>
+
+    </div>
+
+</body>
