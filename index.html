@@ -59,8 +59,13 @@
     } 
 
     .item {
-        color: #eee8d5;
+        color: #268bd2;
+        text-decoration: none;
         text-align: center;
+    }
+
+    .item:link .item:visited {
+        color: #268bd2;
     }
     
     .search {
@@ -69,6 +74,17 @@
     }
 
 </style>
+
+<script>
+window.onkeyup = keyup;
+var input;
+function keyup(e) {
+    input = e.target.value;
+    if (e.keyCode == 13) {
+        window.location = "https://duckduckgo.com/?q=" + input;
+    }
+}
+</script>
 
 
 <head>
@@ -80,42 +96,42 @@
 
 <body>
     
-    <!--
-    <div>
-        <input id="search", style="search", type="text", spellcheck="true", autofocus, class="search"
-            onKeyDown="Javascript: if (event.keyCode == 13) search();">
-    </div>
-    -->
-
     <div class="grid-container">
             
-            <input id="search", style="search", type="text", spellcheck="true", autofocus, class="search">
+            <!-- search bar -->
+            <input id="search", style="search", type="text", spellcheck="true", autofocus, class="search", 
+                    onKeyDown="Javascript: if (event.keyCode == 13) search();">
             
+            <!-- headers -->
             <p class=header class="item">/soc/</p>
             <p class=header class="item">/frms/</p>
             <p class=header class="item">/dev/</p>
             <p class=header class="item">/misc/</p>
             
-            <a href="example.com" class="item">youtube</a>
-            <a href="example.com" class="item">twitter</a>
-            <a href="example.com" class="item">books</a>
-            <a href="animaunt.org" class="item">anime</a>
+            <!-- 1st row -->
+            <a href="https://youtube.com" class="item">youtube</a>
+            <a href="https://2ch.hk/s" class="item">softach</a>
+            <a href="https://wiki.gentoo.org" class="item">gentoo wiki</a>
+            <a href="https://mpt.ru" class="item">mpt</a>
 
-            <a href="2ch.hk/s" class="item">softach</a>
+            <!-- 2nd row -->
+            <a href="https://twitter.com" class="item">twitter</a>
             <a href="https://boards.4channel.org/g/" class="item">4ch/g/</a>
-            <a href="linux.org.ru" class="item">LOR</a>
-            <a href="example.com" class="item">example</a>
-
-            <a href="wiki.gentoo.org" class="item">gentoo wiki</a>
-            <a href="packages.gentoo.org" class="item">packages</a>
-            <a href="github.com/wellWINeo" class="item">github</a>
-            <a href="opennet.ru" class="item">opennet</a>
-
-            <a href="mpt.ru" class="item">mpt</a>
-            <a href="mailto:isip_s.a.uspenskiy@mpt.ru" class="item">my mail</a>
-            <a href="getpocket.com/my-list" class="item">pocket</a>
-            <a href="example.com" class="item">example</a>
-
+            <a href="https://packages.gentoo.org" class="item">packages</a>
+            <a href="mailto:your@mail" class="item">my mail</a>
+            
+            <!-- 3rd row -->
+            <a href="https://play.google.com/books" class="item">books</a>
+            <a href="https://linux.org.ru" class="item">lor</a>
+            <a href="https://github.com/wellWINeo" class="item">github</a>
+            <a href="https://music.youtube.com" class="item">music</a>
+            
+            <!-- 4th row -->
+            <a href="https://animaunt.org" class="item">anime</a>
+            <a href="https://en.wikipedia.org/wiki/Emacs#Features" class="item">example</a>
+            <a href="https://pastebin.com" class="item">pastebin</a>
+            <a href="https://opennet.ru" class="item">opennet</a>
+            
     </div>
 
 </body>
